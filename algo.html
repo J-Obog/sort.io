@@ -1,0 +1,91 @@
+<html>
+<body style = "font-family:Consolas;background:black">
+
+
+
+<h1 style = "color:white">Algorithms R Us</h1>
+<button onclick = "sortSelected = 0;updateSelection()" class = "nav-btn">Selection</button>
+<button onclick = "sortSelected = 1;updateSelection()" class = "nav-btn">Insertion</button>
+<button onclick = "sortSelected = 2;updateSelection()" class = "nav-btn">Bubble</button>
+<button onclick = "sortSelected = 3;updateSelection()" class = "nav-btn">Counting</button>
+<br>
+<button onclick = "sorting = sortSelected + 1">Begin</button>
+
+
+<div id = "bar-box" style = "position:fixed;bottom:1%;left:1%;width:98%;height:50%"></div>
+
+
+
+
+<link rel = "stylesheet" type = "text/css" href = "algo.css"></link>
+<script src = "selection-sort.js"></script>
+<script src = "insertion-sort.js"></script>
+<script src = "bubble-sort.js"></script>
+<script src = "counting-sort.js"></script>
+
+</body>
+</html>
+
+
+
+<script>
+//#1da1f2
+const DIAGRAM = document.getElementById("bar-box");
+const ALGORITHMS = document.getElementsByClassName("nav-btn");
+var values = [];
+var sortSelected = 0;
+var sorting = 0; 
+var maxValue = 50;
+var barNum = 400;
+
+
+function initializeProgram() {
+values = [];
+for(var i = 0;i<barNum;i++) {
+values.push(Math.ceil(Math.random()*maxValue));
+}
+updateSelection();
+formBars();
+sorting = 0;
+}
+initializeProgram();
+
+function updateSelection() {
+for(var i = 0;i < ALGORITHMS.length;i++) {
+if(i == sortSelected) {
+ALGORITHMS[i].style.backgroundColor = "#1da1f2"; 
+ALGORITHMS[i].style.color = "white";
+} else {
+ALGORITHMS[i].style.backgroundColor = "white"; 
+ALGORITHMS[i].style.color = "black";
+}
+}
+}
+
+
+
+function formBars() {
+	DIAGRAM.innerHTML = "";
+	var lp = 0;
+	for(var i = 0;i<values.length;i++) {
+		var fd = document.createElement("div");
+		fd.className = "bars";
+		fd.style.left =  lp + "%";
+		fd.style.width = (100/values.length) + "%";
+		fd.style.height = ((values[i]/maxValue)*100) + "%";
+		DIAGRAM.appendChild(fd);
+		lp += (100/values.length);
+	}
+}
+
+
+setInterval(function(){
+	if(sorting == 1) {if(selectionMarker<(values.length)-1){selectionSort();}}
+	if(sorting == 2) {if(insertionMarker < values.length){insertionSort();}}
+	if(sorting == 3) {if(looping){bubbleSort();}}
+	if(sorting == 4) {if(countingMarker < maxValue){countingSort();}}
+},50);
+
+
+
+</script>

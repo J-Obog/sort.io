@@ -1,0 +1,21 @@
+.nav-btn {
+font-size:100%;
+cursor:pointer;
+outline:none;
+background:white;
+border:0px;
+padding:5px;
+border-radius:10px;
+color:black;
+font-family:Consolas;
+font-weight:bold;
+transition:0.5s;
+}
+
+
+.bars {
+position:absolute;
+border:2px solid black;
+background:white;
+bottom:0%;
+}
