@@ -4,4 +4,4 @@ before-script:
     - pip3 install -r requirements.txt
 
 script:
-    - echo "Hello World"
+    - echo Build Successful 
