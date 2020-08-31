@@ -1,66 +1,43 @@
 from graphics import *
-from random import randint
-from time import sleep
-import algos
 
-# Window configuration
-ROOT_WIDTH = 700
-ROOT_HEIGHT = 700
-ROOT_BG = "black"
+methods = ["Bubble Sort", "Insertion Sort", "Selection Sort"]
 
-
-def rerenderWindow(context, arr):
-    #sleep(0.05)
-    clearWindow(context)
-    renderBars(context, arr)
-
-
-def clearWindow(win): 
-    for item in win.items[:]:
-        item.undraw()
-    win.update()
-
-
-def drawBar(context, x1, y1, x2, y2):
+# Draw a single bar
+def drawBar(window, x1, y1, x2, y2):
     bar = Rectangle(Point(x1, y1), Point(x2, y2)) 
-    bar.setFill("white") 
-    bar.draw(context)
+    bar.setFill(color_rgb(255, 255, 255)) 
+    bar.draw(window)
 
-def renderBars(context, arr):
-    maxVal= max(arr)
-    
-    barWidth = (ROOT_WIDTH/len(arr))- 5
-    for [index, val] in enumerate(arr): 
-        x1 = index*barWidth 
-        x2 = x1 + barWidth
+
+# Initially load all bars
+def renderBars(window, array):
+    W = window.getWidth()
+    H = window.getHeight()
+    mv = max(array)    
+    w = (W/len(array))-5
+    for [i,v] in enumerate(array): 
+        x1 = i*w
+        x2 = x1+w
         y1 = 0 
-        y2 = (ROOT_HEIGHT * (val/maxVal)) - 5
-        drawBar(context, x1, y1, x2, y2)
+        y2 = (H*(v/mv))-10
+        drawBar(window, x1, y1, x2, y2)
 
 
 
-def main():
-    #Set up canvas
-    WINDOW = GraphWin("Aglo Visual", ROOT_WIDTH, ROOT_HEIGHT)
-    WINDOW.setBackground(ROOT_BG)
-     
-    randomArray = lambda min=0, max=100, N=50: [ randint(min, max) for i in range(N)]
-
-    rarray = randomArray(0, 100, 10)
-    
-    renderBars(WINDOW, rarray)
-    #WINDOW.items = []
-    #WINDOW.flush()
-
-    #algos.bubbleSort(rarray, WINDOW, rerenderWindow)
-
-    
-    WINDOW.getMouse()   
-    WINDOW.close() 
 
 
-if __name__ == "__main__":  
-    main()
-    print("Running module directly") 
-elif __name__ == "gui": 
-    main() 
+def sortVisual(method, array):
+    winName = methods[method]
+    window = GraphWin(winName, 700, 700)
+    window.setBackground(color_rgb(0, 0, 0))
+
+    r = Rectangle(Point(0,0), Point(50,50))
+    r.setFill("white") 
+    r.draw(window) 
+    time.sleep(1) 
+    r.p1 = Point(50,50) 
+    r.p2 = Point(100,100)
+    #renderBars(window, array)
+
+    window.getMouse()
+    window.close()
