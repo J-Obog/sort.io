@@ -1,4 +1,4 @@
-# algo-visual
+# sort.io
 
 A Sorting algorithim visualizer for educational purposes
 
