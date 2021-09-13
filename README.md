@@ -1,6 +1,6 @@
 # algo-visual
 
-A Python-driven sorting algorithim visualizer
+A Sorting algorithim visualizer for educational purposes
 
 **Potentially supported algorithims:**
 - Selection sort 
