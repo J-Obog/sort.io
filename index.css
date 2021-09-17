@@ -1,0 +1,18 @@
+body {
+    background: #1e1a20;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+    background: white;
+}
+
+.nav-item {
+    font-size: larger
+}
+
+.nav-group {
+    display: flex; 
+    justify-content: space-between;
+}
