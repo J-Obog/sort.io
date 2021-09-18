@@ -1,18 +1,42 @@
 body {
-    background: #1e1a20;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+   /*background: #1e1a20;*/
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 #navbar {
-    background: white;
+   background: white;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px;
+   box-shadow: 0px 5px 5px lightgray;
 }
 
 .nav-item {
-    font-size: larger
+   font-size: larger;
+   margin-right: 20px;
 }
 
 .nav-group {
-    display: flex; 
-    justify-content: space-between;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+#site-logo {
+   width: 15%;
+}
+
+#visual-canvas {
+   position: relative;
+   z-index: -1;
+   background: #e5e5e5;
+   height: 650px;
+}
+
+.bar {
+   position: absolute;
+   background: blue;
+   bottom: 0%;
 }
