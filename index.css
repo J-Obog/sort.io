@@ -6,26 +6,20 @@ body {
 
 #navbar {
    background: white;
+   padding: 15px;
+   box-shadow: 0px 5px 5px lightgray;
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 15px;
-   box-shadow: 0px 5px 5px lightgray;
 }
 
 .nav-item {
-   font-size: larger;
+   font-size: large;
    margin-right: 20px;
 }
 
 .nav-group {
    display: flex;
-   align-items: center;
-   justify-content: space-around;
-}
-
-#site-logo {
-   width: 15%;
 }
 
 #visual-canvas {
