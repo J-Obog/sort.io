@@ -1,0 +1,26 @@
+* {
+   font-family: "Quicksand", sans-serif;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+#visual-canvas {
+   position: relative;
+   z-index: -1;
+   background: #e5e5e5;
+   height: 600px;
+}
+
+.bar {
+   position: absolute;
+   background: blue;
+   bottom: 0%;
+}
+
+#play-controls {
+   color: white;
+   padding: 5px;
+}

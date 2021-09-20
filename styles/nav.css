@@ -1,0 +1,22 @@
+/* styling for navbar */
+
+#navbar {
+   background: white;
+   padding: 5px;
+   box-shadow: 0px 5px 5px lightgray;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav-item {
+   margin-right: 1rem;
+}
+
+.nav-group {
+   display: flex;
+}
+
+.nav-btn {
+   border: 0;
+}
