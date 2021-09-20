@@ -1,7 +1,9 @@
-function randomArray(n, min, max) {}
+export function randomArray(n, min, max) {}
 
-function renderBars(arr, max) {
+export function renderBars(arr, max) {}
 
+export function clearBars() {
+   $(".bar").remove();
 }
 
-function 
+export function initUI() {}

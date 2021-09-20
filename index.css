@@ -15,7 +15,7 @@ body {
 
 .nav-item {
    font-size: large;
-   margin-right: 20px;
+   margin-right: 1rem;
 }
 
 .nav-group {
@@ -26,11 +26,17 @@ body {
    position: relative;
    z-index: -1;
    background: #e5e5e5;
-   height: 650px;
+   height: 600px;
 }
 
 .bar {
    position: absolute;
    background: blue;
    bottom: 0%;
+}
+
+#play-controls {
+   background: black;
+   color: white;
+   padding: 5px;
 }

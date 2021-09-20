@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Sorting Visualizer</title>
       <link rel="stylesheet" href="index.css" />
-      <script src="/scripts/utils.js" type="module"></script>
-      <script src="/scripts/sort.js" type="module"></script>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      ></script>
+      <script src="/scripts/main.js" type="module"></script>
    </head>
    <body>
       <div>
          <nav id="navbar">
-            <!--
-            <a href="https://github.com/J-Obog" target="blank"
-               ><img src="/res/img/logo.png" id="site-logo"
-            /></a>
-            -->
             <a href="https://github.com/J-Obog" target="blank"
                ><img src="/res/img/logo.png" width="120px"
             /></a>
 
             <div class="nav-group">
-               <div class="nav-item">Link 1</div>
-               <div class="nav-item">Link 1</div>
-               <div class="nav-item">Link 1</div>
+               <div class="nav-item">
+                  <span>Sorting Speed</span>
+                  <input type="range" />
+               </div>
+               <div class="nav-item">
+                  <span>Number of Bars</span>
+                  <input type="range" />
+               </div>
             </div>
 
             <div class="nav-group">
-               <div class="nav-item">Link 1</div>
-               <div class="nav-item">Link 1</div>
-               <div class="nav-item">Link 1</div>
+               <div class="nav-item">
+                  <button class="sort-method">BUBBLE</button>
+               </div>
+               <div class="nav-item">
+                  <button class="sort-method">SELECTION</button>
+               </div>
+               <div class="nav-item">
+                  <button class="sort-method">INSERTION</button>
+               </div>
             </div>
          </nav>
       </div>
 
-      <div id="visual-canvas"></div>
+      <div id="visual-canvas">
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+      </div>
+
+      <!--
+      <div id="play-controls">Hello World</div>-->
 
       <div>
          <footer></footer>
